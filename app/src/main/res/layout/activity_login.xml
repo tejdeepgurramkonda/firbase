@@ -3,48 +3,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@drawable/img_2"
     tools:context=".ActivityLogin">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="180dp"
-        android:src="@drawable/img_1" />
 
-
-    <EditText
-        android:id="@+id/emaillogin"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_marginTop="200dp"
         android:layout_height="wrap_content"
-        android:hint="Email" />
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/passwordlogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword"/>
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:gravity="center"
-        android:id="@+id/forgotpassword"
-        android:text="Forgot Password ?"/>
+        android:text="Email"
+        android:textSize="15sp"
+        android:textStyle="normal"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emaillogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="name@example.com" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Password"
+            android:textSize="15sp"
+            android:textStyle="normal"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordlogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="min. 8 characters"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keep me logged in" />
+
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/orange"
+        android:backgroundTint="@color/yellow"
         android:id="@+id/btnlogin"
         android:text="Login"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/orange"
-        android:id="@+id/btnsignup"
-        android:text="Signup"/>
+        
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="120dp"
+            android:layout_height="wrap_content"
+            android:background="@color/lightyellow"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/forgotpassword"
+                android:text="Forgot Password ?"/>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </LinearLayout>

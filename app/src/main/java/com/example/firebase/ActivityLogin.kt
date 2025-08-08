@@ -20,7 +20,7 @@ class ActivityLogin: AppCompatActivity() {
 
     private lateinit var forgotPasswordButton: TextView
 
-    private lateinit var signupButton: Button
+    private lateinit var signupButton: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +31,7 @@ class ActivityLogin: AppCompatActivity() {
         email = findViewById(R.id.emaillogin)
         password = findViewById(R.id.passwordlogin)
         loginButton = findViewById(R.id.btnlogin)
-        signupButton = findViewById(R.id.btnsignup)
+        signupButton = findViewById(R.id.gotosignup)
         forgotPasswordButton = findViewById(R.id.forgotpassword)
 
         signupButton.setOnClickListener {
