@@ -31,7 +31,7 @@ class ActivityLogin: AppCompatActivity() {
         email = findViewById(R.id.emaillogin)
         password = findViewById(R.id.passwordlogin)
         loginButton = findViewById(R.id.btnlogin)
-        signupButton = findViewById(R.id.gotosignup)
+        signupButton = findViewById(R.id.btnsignup)
         forgotPasswordButton = findViewById(R.id.forgotpassword)
 
         signupButton.setOnClickListener {
