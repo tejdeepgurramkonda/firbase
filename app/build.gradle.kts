@@ -37,15 +37,10 @@ android {
 }
 
 dependencies {
-    // Make sure you have the Firebase BOM (Bill of Materials) - LATEST VERSION RECOMMENDED
-    implementation(platform("com.google.firebase:firebase-bom:32.7.0")) // Or the latest version
-
-    // Add the Firebase Realtime Database dependency (Kotlin extensions)
-    implementation("com.google.firebase:firebase-database-ktx")
-
-    // If you plan to use Firebase Authentication (common with database operations)
-    implementation("com.google.firebase:firebase-auth-ktx")
-
+    implementation("com.google.firebase:firebase-auth:24.0.0")
+    implementation (platform("com.google.firebase:firebase-bom:33.1.2"))
+    implementation ("com.google.firebase:firebase-database-ktx")
+    implementation ("com.google.firebase:firebase-analytics-ktx")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -56,6 +51,7 @@ dependencies {
     implementation(libs.androidx.credentials.play.services.auth)
     implementation(libs.googleid)
     implementation(libs.firebase.database.ktx)
+    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
